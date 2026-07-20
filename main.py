@@ -139,13 +139,7 @@ class MiMotion():
 
     def run(self):
         # ---------- 1. 计算步数范围 ----------
-        try:
-            min_step, max_step = self.get_step_by_time()
-            if min_step > max_step:
-                min_step, max_step = max_step, min_step
-        except Exception as e:
-            print(f'步数范围初始化失败: {e}，使用默认值')
-            min_step, max_step = 10000, 19999
+        min_step, max_step = 10000, 20000
 
         step = str(random.randint(min_step, max_step))
 
